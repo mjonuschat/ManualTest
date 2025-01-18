@@ -1,5 +1,5 @@
 # NOTE This variable has to bedefined in the including file:
-#TOOL_DIR = tool
+TOOL_DIR = tool
 
 OUT_DIR = build
 RESOURCES = $(TOOL_DIR)/template images
@@ -12,27 +12,25 @@ all:: pdf html
 
 pdf:: metadata.yml *.md
 	pandoc \
-		metadata.yml *.md \
+		metadata.yml $(shell echo *.md) \
 		--output manual.pdf \
-		--template $(TOOL_DIR)/template/eisvogel.tex \
+		--template $(TOOL_DIR)/template/eisvogel.latex \
 		--from markdown \
 		--listings \
-		--number-sections \
 		--table-of-contents \
-		--metadata date="`date -u '+%Y-%m-%d'`"
+		
 
 html:: metadata.yml *.md
 	pandoc \
-		metadata.yml *.md \
+		metadata.yml $(shell echo *.md) \
 		--output manual.html \
 		--template $(TOOL_DIR)/template/mdbook.html \
 		--from markdown \
 		--listings \
-		--number-sections \
 		--table-of-contents \
 		--toc-depth=2 \
 		--katex \
-		--metadata date="`date -u '+%Y-%m-%d'`"
+		
 
 dist:: all
 	${MKDIR_P} ${OUT_DIR}
