@@ -2,6 +2,11 @@
     font-family: 'Play'; /* Name your font family */
     src: url('fontawesome/webfonts/Play-Regular.ttf'); /* Locate the .ttf file within your directory*/
   }
+
+  @font-face {
+    font-family: 'PlayBold'; /* Name your font family */
+    src: url('fontawesome/webfonts/Play-Bold.ttf'); /* Locate the .ttf file within your directory*/
+  }
   
 :root {
     --sidebar-width: 300px;
@@ -88,7 +93,7 @@ h1, h2, h4, h5
 h3
 {
     color: var(--main);
-text-indent: 5%;
+text-indent: 0.5%;
 border-bottom: 1px solid var(--accent);
 }
 
@@ -129,7 +134,7 @@ a.header:target h4:before {
     margin-left: auto;
     font-family: "Play", sans-serif; 
     margin-right: auto;
-    max-width: var(--content-max-width);
+    
 }
 .content a { text-decoration: none; }
 .content a:hover { text-decoration: underline; }
@@ -145,12 +150,59 @@ a.header:target h4:before {
 
 table {
     margin: 0 auto;
-    border-collapse: collapse;
 }
+strong {
+    color: var(--accent);
+}    
+
+
 table td {
     padding: 3px 20px;
     align-content: center;
     text-align: center;
+    
+}
+
+h3#print-guidelines + table,
+h3#print-guidelines + table ~ table {
+    border-collapse: collapse;
+    width: 100%;
+    
+    margin: 10px 0;
+    table-layout: fixed; /* Ensures columns stay the same width */
+}
+
+h3#print-guidelines + table colgroup col,
+h3#print-guidelines + table ~ table colgroup col {
+    width: 50%; /* Adjust as needed for consistent column width */
+}
+
+h3#print-guidelines + table th,
+h3#print-guidelines + table td,
+h3#print-guidelines + table ~ table th,
+h3#print-guidelines + table ~ table td {
+    
+    padding: 5px;
+    text-align: center;
+}
+
+h3#print-guidelines + table th {
+    
+    font-weight: bold;
+}
+
+h3#how-to-get-help + h5,
+h3#how-to-get-help + h5 ~ h5  {
+color: var(--main)
+
+}
+
+h3#hardware + table th,
+h3#hardware  + table td,
+h3#hardware + table ~ table th,
+h3#hardware + table ~ table td  {
+    border: none;
+
 }
 
 table thead td {
@@ -162,12 +214,12 @@ table thead tr {
     text-decoration: underline;
     
 }
-/* Alternate background colors for rows */
-table tbody tr:nth-child(2n) {
-    color: var(--accent)
+
+
+p
+{
+    text-align: center;
 }
-
-
 blockquote {
     margin: 20px 0;
     padding: 0 20px;
