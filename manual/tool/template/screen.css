@@ -24,8 +24,8 @@
     --icons: #cccccc;
     --icons-hover: #005e85;
 
-    --title: #555555;
-
+    --accent: #54AB3D;
+    --main: #7F7F7F;
     --links: #4183c4;
 
     --inline-code-color: #6e6b5e;
@@ -75,15 +75,24 @@ code {
 .hidden { display: none; }
 .play-button.hidden { display: none; }
 
-h1     { margin-top: 1em; }
+h1     { margin-top: 1em;text-align: center}
 h2, h3 { margin-top: 0.8em; }
 h4, h5 { margin-top: 0.6em; }
 
-h1, h2, h3, h4, h5
+h1, h2, h4, h5
 {
     font-family: "Play"; 
+    color: var(--accent);
 }
 
+h3
+{
+    color: var(--main);
+text-indent: 5%;
+border-bottom: 1px solid var(--accent);
+}
+
+h5,h4 {  text-align: center; }
 .header + .header h3,
 .header + .header h4,
 .header + .header h5 {
@@ -140,21 +149,22 @@ table {
 }
 table td {
     padding: 3px 20px;
-    border: 1px var(--table-border-color) solid;
+    align-content: center;
+    text-align: center;
 }
-table thead {
-    background: var(--table-header-bg);
-}
+
 table thead td {
     font-weight: 700;
     border: none;
 }
 table thead tr {
-    border: 1px var(--table-header-bg) solid;
+    color: var(--accent);
+    text-decoration: underline;
+    
 }
 /* Alternate background colors for rows */
 table tbody tr:nth-child(2n) {
-    background: var(--table-alternate-bg);
+    color: var(--accent)
 }
 
 
@@ -282,7 +292,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 .menu-title {
     display: inline-block;
     font-weight: 200;
-    font-size: 20px;
+    font-size: 40px;
     font-family: "Play", sans-serif; 
     line-height: 50px;
     text-align: center;
@@ -291,7 +301,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--title);
+    color: var(--accent);
 }
 .js .menu-title {
     cursor: pointer;
