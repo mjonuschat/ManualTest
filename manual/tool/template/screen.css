@@ -89,7 +89,10 @@ h1, h2, h4, h5
     font-family: "Play"; 
     color: var(--accent);
 }
-
+h4.main
+{
+    color: var(--main);
+}
 h3
 {
     color: var(--main);
