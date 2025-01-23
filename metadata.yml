@@ -1,0 +1,17 @@
+---
+title: "Micron R1"
+title-prefix: "Assembly Manual"
+subtitle: "Everything is smaller but the price"
+author: [Kyle Hart]
+date: "2025-01-17"
+subject: "Markdown"
+keywords: [Markdown, Example]
+lang: "en"
+titlepage: true
+titlepage-text-color: "005e85"
+titlepage-rule-color: "005e85"
+titlepage-rule-height: 2
+logo: "images/CoverPage1.png"
+logo-width: 200
+toc-own-page: true
+...
