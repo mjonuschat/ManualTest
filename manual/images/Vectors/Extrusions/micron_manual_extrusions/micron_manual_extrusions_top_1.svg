@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="svg3550"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1889.7 1504"
+   style="enable-background:new 0 0 1889.7 1504;"
+   xml:space="preserve"
+   sodipodi:docname="micron_manual_extrusions_top_1.svg"
+   inkscape:export-filename="micron_manual_extrusions_top_1.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs5210" />
+<style
+   type="text/css"
+   id="style5100">
+	
+		.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#787878;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:29.3839;}
+	
+		.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#787878;stroke:#000100;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:29.3839;}
+	
+		.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#96FA96;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:29.3839;}
+	.st3{display:none;}
+	
+		.st4{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:#787878;stroke:#000000;stroke-width:0.9731;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:11.3386;}
+	.st5{fill:none;stroke:#808080;stroke-width:0.6321;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.98;}
+	.st6{fill:none;stroke:#808080;stroke-width:0.6377;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.98;}
+	.st7{fill:none;stroke:#808080;stroke-width:0.5665;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.98;}
+	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#808080;fill-opacity:0.98;}
+	.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st10{enable-background:new    ;}
+	.st11{fill:none;stroke:#000000;stroke-width:1.1452;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;}
+</style>
+<sodipodi:namedview
+   bordercolor="#000000"
+   borderopacity="0.25"
+   id="namedview3552"
+   inkscape:current-layer="layer1"
+   inkscape:cx="1041"
+   inkscape:cy="732"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:document-units="mm"
+   inkscape:pagecheckerboard="0"
+   inkscape:pageopacity="0.0"
+   inkscape:showpageshadow="2"
+   inkscape:window-height="1017"
+   inkscape:window-maximized="1"
+   inkscape:window-width="1920"
+   inkscape:window-x="1912"
+   inkscape:window-y="-8"
+   inkscape:zoom="0.5"
+   pagecolor="#ffffff"
+   showgrid="false"
+   showguides="true">
+	</sodipodi:namedview>
+<script
+   id="script1907"
+   type="text/ecmascript">
+	<![CDATA[
+if(typeof(top) != "undefined")
+{
+	top.ShowPaper = ShowPaper;
+}
+function ShowHotSpot(evt,hotspotid)
+{
+	var svgDocument = evt.target.ownerDocument;
+	var strId = "hotspot."+hotspotid;
+	var hotspot = svgDocument.getElementById(strId);
+	if(hotspot)
+		hotspot.setAttribute("opacity",".5");
+}
+function HideHotSpot(evt,hotspotid)
+{
+	var svgDocument = evt.target.ownerDocument;
+	var strId = "hotspot."+hotspotid;
+	var hotspot = svgDocument.getElementById(strId);
+	if(hotspot)
+		hotspot.setAttribute("opacity","0");
+
+	var toolTip = svgDocument.getElementById('ToolTip');
+	if(toolTip)
+		toolTip.setAttribute("visibility","hidden");
+}
+function ShowToolTip(evt,hotspotid,strTooltip)
+{
+	if(strTooltip=="")
+	return;
+
+	// change text
+	var svgDocument = evt.target.ownerDocument;
+	var tiptext = svgDocument.getElementById('ToolTipText');
+	if( !tiptext )
+	return;
+	tiptext.firstChild.nodeValue = " " + strTooltip + "  " ;
+
+	// show tooltip before, else some refresh issue
+
+	var toolTip = svgDocument.getElementById('ToolTip');
+	if(!toolTip)
+	return;
+
+	toolTip.setAttribute("visibility","visible");
+	toolTip.setAttribute("opacity",".95");
+
+	// move tooltip
+	// get viewbox
+
+	var root = svgDocument.documentElement;
+	var vbox = (root.getAttribute("viewBox")).split(' ');
+	var x0 = parseFloat(vbox[0]);
+	var y0 = parseFloat(vbox[1]);
+	var vboxW = parseFloat(vbox[2]);
+	var vboxH = parseFloat(vbox[3]);
+
+	// get default width of svg
+
+	var strW = root.getAttribute("width");
+	var svgW = parseFloat(strW);
+	if(strW.indexOf('mm') != -1)
+	svgW *= 3.779;
+
+	var strH = root.getAttribute("height");
+	var svgH = parseFloat(strH);
+	if(strH.indexOf('mm') != -1)
+	svgH *= 3.779;  	// 96 dpi  -> 96/25.4 = 3.779
+
+	// update the viewbox / width / height if svg is embedded in html with zoom fit all
+	var realx0 = x0;
+	var realy0 = y0;
+	var realvboxW = vboxW;
+	var realvboxH = vboxH;
+	var realsvgW = svgW;
+	var realsvgH = svgH;
+
+	if ((typeof(top) == "undefined") || (typeof(top.svgctl1) != "undefined")) // embedded in html
+	{
+		// get window size in pxl
+
+		svgW = window.innerWidth;
+		svgH = window.innerHeight;
+
+		// calculate real viewbox
+
+		realsvgW = svgW;
+		realsvgH = svgH;
+		if((svgW / svgH) > (vboxW / vboxH))
+		{
+			realvboxW = (vboxH * svgW) / svgH;
+			realvboxH = vboxH;
+			realx0 = x0 - (realvboxW - vboxW)/2 ;
+		}
+		else
+		{
+			realvboxH = (vboxW * svgH) / svgW;
+			realvboxW = vboxW;
+			realy0 = y0 - (realvboxH - vboxH)/2 ;
+		}
+	}
+
+	// get user zoom/pan
+
+	var newScale = root.currentScale;
+	var translation = root.currentTranslate;
+
+	// transform pxl to user unit
+
+	var xPos = (((evt.clientX+10- translation.x)/newScale) * realvboxW)/realsvgW  + realx0 ;
+	var yPos = (((evt.clientY+5- translation.y)/newScale) * realvboxH)/ realsvgH  + realy0 ;
+	var scaleForWidth = ( (1 / newScale) * realvboxH) / realsvgH;
+
+	// move tooltip
+
+	toolTip.setAttribute("transform", "translate(" + xPos + "," + yPos + ")" );
+
+	// resize tooltip
+
+	var fontsize = 12;
+	tiptext.setAttribute("font-size",fontsize*scaleForWidth);
+	tiptext.setAttribute("y", fontsize*scaleForWidth);
+	var tipBG = svgDocument.getElementById('ToolTipBG');
+	var outline = tiptext.getBBox();
+	if(tipBG)
+	{
+		tipBG.setAttribute("stroke-width", 1*scaleForWidth);
+		tipBG.setAttribute("width", Number(outline.width) );
+		tipBG.setAttribute("height", Number(outline.height) + fontsize*.5*scaleForWidth );
+	}
+	var ToolTipShadow = svgDocument.getElementById('ToolTipShadow');
+	if(ToolTipShadow)
+	{
+		ToolTipShadow.setAttribute("width", Number(outline.width) );
+		ToolTipShadow.setAttribute("height", Number(outline.height) + fontsize*.5*scaleForWidth );
+		ToolTipShadow.setAttribute("x", 3*scaleForWidth);
+		ToolTipShadow.setAttribute("y", 3*scaleForWidth);
+	}
+}
+function ShowPaper()
+{
+  var svgDocument = getDocument();
+  var paper = svgDocument.getElementById("paperID");
+  if(paper)
+  {
+    paper.setAttribute("transform","scale(1)");
+    paper.setAttribute("opacity","1");
+    paper.setAttribute("visibility","visible");
+  }
+  var svg = svgDocument.getRootElement();
+  if(svg)
+  {
+    svg.setAttribute("width","307.000mm");
+    svg.setAttribute("height","220.000mm");
+    svg.setAttribute("viewBox","-5.000000 -5.000000 307.000000 220.000000");
+  }
+}
+
+		]]>
+</script>
+<g
+   id="layer1"
+   transform="matrix(2.5914985,0,0,2.5914985,-51.970419,-8.3277599)"
+   inkscape:export-filename="micron_manual_extrusions_top_1.svg"
+   inkscape:export-xdpi="49.369797"
+   inkscape:export-ydpi="49.369797"
+   inkscape:groupmode="layer"
+   inkscape:label="Extrusions">
+	<g
+   id="Actor_.16"
+   inkscape:label="D"
+   inkscape:export-filename="micron_manual_extrusions_top_1.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+		<g
+   id="g3527">
+			<path
+   id="path3475"
+   sodipodi:nodetypes="cccccccccccccc"
+   class="st0"
+   d="M682.6,172.5h9.9v410.4h-9.9V172.5     C685.1,172.5,685.1,172.5,682.6,172.5 M692.5,582.9h5V172.5h-5 M697.5,582.9h9.9V172.5h-9.9" />
+		</g>
+	</g>
+	<g
+   id="Actor_.15"
+   inkscape:label="E">
+		<g
+   id="g3472">
+			<path
+   id="path3436"
+   sodipodi:nodetypes="ccccccccccccccc"
+   class="st1"
+   d="M733.9,582.9h14.9V285h-9.9v297.8 M733.9,285     c2.3,0-7.7,0-10,0l0,297.8h9.9V285 M733.9,285h5v297.8h-5V285z" />
+		</g>
+	</g>
+	<g
+   id="layer7"
+   inkscape:groupmode="layer"
+   inkscape:label="C">
+		<g
+   id="Actor_.13"
+   inkscape:label="C2">
+			<g
+   id="g3316">
+				<path
+   id="path3276"
+   sodipodi:nodetypes="ccccccccccc"
+   class="st0"
+   d="M651.1,147.7v435.2 M641.2,147.7h14.9v435.2h-14.9V147.7       M656.1,582.9h9.9V147.7h-9.9" />
+			</g>
+		</g>
+		<g
+   id="Actor_.13-6"
+   transform="translate(-14.605)"
+   inkscape:label="C1">
+			<g
+   id="g3316-1">
+				<path
+   id="path3276-8"
+   sodipodi:nodetypes="ccccccccccc"
+   class="st0"
+   d="M624.3,147.7v435.2 M614.4,147.7h14.9v435.2h-14.9V147.7       M629.3,582.9h9.9V147.7h-9.9" />
+			</g>
+		</g>
+	</g>
+	<g
+   id="layer6"
+   inkscape:groupmode="layer"
+   inkscape:label="B">
+		<g
+   id="Actor_.17"
+   inkscape:label="B10">
+			<g
+   id="g3536">
+				<path
+   id="path3534"
+   class="st0"
+   d="M490.6,582.9V119.5 M485.7,582.9h14.9v-3V119.5h-14.9 M475.9,582.9h-0.2V119.5h9.9v463.3      H475.9" />
+			</g>
+		</g>
+		<g
+   id="Actor_.17-6"
+   transform="translate(29.185)"
+   inkscape:label="B9">
+			<g
+   id="g3536-7">
+				<path
+   id="path3534-4"
+   class="st0"
+   d="M544.2,582.9V119.5 M539.2,582.9h14.9v-3V119.5h-14.9 M529.5,582.9h-0.2V119.5h9.9v463.3      H529.5" />
+			</g>
+		</g>
+		<g
+   id="Actor_.17-4"
+   transform="translate(14.59)"
+   inkscape:label="B8">
+			<g
+   id="g3536-5">
+				<path
+   id="path3534-8"
+   class="st0"
+   d="M517.4,582.9V119.5 M512.4,582.9h14.9v-3V119.5h-14.9 M502.7,582.9h-0.2V119.5h9.9v463.3      H502.7" />
+			</g>
+		</g>
+		<g
+   id="Actor_.17-3"
+   transform="translate(-14.6)"
+   inkscape:label="B7">
+			<g
+   id="g3536-8">
+				<path
+   id="path3534-6"
+   class="st0"
+   d="M463.8,582.9V119.5 M458.9,582.9h14.9v-3V119.5h-14.9 M449.2,582.9h-0.2V119.5h9.9v463.3      H449.2" />
+			</g>
+		</g>
+		<g
+   id="Actor_.17-63"
+   transform="translate(-29.19)"
+   inkscape:label="B6">
+			<g
+   id="g3536-1">
+				<path
+   id="path3534-2"
+   class="st0"
+   d="M437.1,582.9V119.5 M432.1,582.9H447v-3V119.5h-14.9 M422.4,582.9h-0.2V119.5h9.9v463.3      H422.4" />
+			</g>
+		</g>
+		<g
+   id="Actor_.17-0"
+   transform="translate(-43.79)"
+   inkscape:label="B5"
+   style="fill:#96fa96;fill-opacity:1">
+			<g
+   id="g3536-4"
+   style="fill:#96fa96;fill-opacity:1">
+				<path
+   id="path3534-66"
+   class="st0"
+   d="M410.3,582.9V119.5 M405.3,582.9h14.9v-3V119.5h-14.9 M395.6,582.9h-0.2V119.5h9.9v463.3      H395.6"
+   style="fill:#96fa96;fill-opacity:1" />
+			</g>
+		</g>
+		<g
+   id="Actor_.17-60"
+   transform="translate(-58.369999)"
+   inkscape:label="B4">
+			<g
+   id="g3536-54">
+				<path
+   id="path3534-3"
+   class="st0"
+   d="M383.5,582.9V119.5 M378.6,582.9h14.9v-3V119.5h-14.9 M368.9,582.9h-0.2V119.5h9.9v463.3      H368.9" />
+			</g>
+		</g>
+		<g
+   id="Actor_.17-7"
+   transform="translate(-72.970001)"
+   inkscape:label="B3">
+			<g
+   id="g3536-56">
+				<path
+   id="path3534-0"
+   class="st0"
+   d="M356.7,582.9V119.5 M351.8,582.9h14.9v-3V119.5h-14.9 M342.1,582.9h-0.2V119.5h9.9v463.3      H342.1" />
+			</g>
+		</g>
+		<g
+   id="Actor_.17-601"
+   transform="translate(-87.57)"
+   inkscape:label="B2">
+			<g
+   id="g3536-0">
+				<path
+   id="path3534-36"
+   class="st0"
+   d="M330,582.9V119.5 M325,582.9h14.9v-3V119.5H325 M315.3,582.9h-0.2V119.5h9.9v463.3H315.3" />
+			</g>
+		</g>
+		<g
+   id="Actor_.17-31"
+   transform="translate(-102.17)"
+   inkscape:label="B1">
+			<g
+   id="g3536-75">
+				<path
+   id="path3534-38"
+   class="st0"
+   d="M303.2,582.9V119.5 M298.2,582.9h14.9v-3V119.5h-14.9 M288.5,582.9h-0.2V119.5h9.9v463.3      H288.5" />
+			</g>
+		</g>
+	</g>
+	<g
+   id="layer5"
+   inkscape:groupmode="layer"
+   inkscape:label="A">
+		
+			<g
+   id="Actor_.7-0-7-4"
+   transform="translate(14.57,0.03)"
+   inkscape:export-filename="micron_manual_extrusions_A.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:label="A4"
+   style="fill:#787878;fill-opacity:1">
+			<g
+   id="g3184-8-9-0"
+   style="fill:#787878;fill-opacity:1">
+				<path
+   id="path3182"
+   sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
+   class="st0"
+   d="M145,3.8l0,10.7 M145,18l0,550.5       M145,572.4l0,10.5 M140.1,3.8c0,0,0,3.7,0,10.4 M140.1,18.3c0,80.3,0.1,469.1,0,549.9 M140.1,572.7c0,7.1,0,10.7,0,10.3       M130.1,582.9C132.6,582.9,132.6,582.9,130.1,582.9C132.4,582.9,132.4,582.9,130.1,582.9C132.4,582.9,132.4,582.9,130.1,582.9      V3.8 M155,582.9V3.8 M130.1,3.8v579.1h1.7h0.2h23V3.8H130.1z M142.4,13.2c1.8,0,3.2,1.4,3.2,3c0,1.7-1.4,3-3.2,3      c-1.8,0-3.2-1.4-3.2-3C139.2,14.6,140.7,13.2,142.4,13.2z M142.5,567.5c1.8,0,3.2,1.4,3.2,3c0,1.7-1.4,3-3.2,3      c-1.8,0-3.2-1.4-3.2-3C139.4,568.8,140.8,567.5,142.5,567.5z"
+   style="fill:#787878;fill-opacity:1" />
+			</g>
+		</g>
+		
+			<g
+   id="Actor_.7-0-7-4-1"
+   transform="translate(54.903563,-85.701203)"
+   inkscape:export-filename="micron_manual_extrusions_A.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:label="A3"
+   style="fill:#787878;fill-opacity:1">
+			<g
+   id="g3184-8-9-0-5"
+   style="fill:#787878;fill-opacity:1">
+				<path
+   id="path3182-4"
+   sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
+   class="st0"
+   d="M63.3,89.4l0,10.7 M63.3,103.6      l0,550.5 M63.3,658.1l0,10.5 M58.3,89.4c0,0,0,3.7,0,10.4 M58.3,104c0,80.3,0.1,469.1,0,549.9 M58.4,658.3c0,7.1,0,10.7,0,10.3       M48.4,668.6C50.9,668.6,50.9,668.6,48.4,668.6C50.7,668.6,50.7,668.6,48.4,668.6C50.7,668.6,50.7,668.6,48.4,668.6V89.4       M73.3,668.6V89.4 M48.4,89.4v579.1h1.7h0.2h23V89.4H48.4z M60.7,98.8c1.8,0,3.2,1.4,3.2,3c0,1.7-1.4,3-3.2,3      c-1.8,0-3.2-1.4-3.2-3C57.5,100.2,58.9,98.8,60.7,98.8z M60.8,653.1c1.8,0,3.2,1.4,3.2,3c0,1.7-1.4,3-3.2,3      c-1.8,0-3.2-1.4-3.2-3C57.6,654.5,59.1,653.1,60.8,653.1z"
+   style="fill:#787878;fill-opacity:1" />
+			</g>
+		</g>
+		
+			<g
+   id="Actor_.7-0-7-4-1-8"
+   transform="translate(40.303736,-85.626046)"
+   inkscape:export-filename="micron_manual_extrusions_A.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:label="A2"
+   style="fill:#787878;fill-opacity:1">
+			<g
+   id="g3184-8-9-0-5-3"
+   style="fill:#787878;fill-opacity:1">
+				<path
+   id="path3182-4-0"
+   sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
+   class="st2"
+   d="M36.5,89.6l0,10.7       M36.5,103.8l0,550.5 M36.5,658.2l0,10.5 M31.6,89.6c0,0,0,3.7,0,10.4 M31.6,104.1c0,80.3,0.1,469.1,0,549.9 M31.6,658.4      c0,7.1,0,10.7,0,10.3 M21.6,668.7C24.1,668.7,24.1,668.7,21.6,668.7C23.9,668.7,23.9,668.7,21.6,668.7      C23.9,668.7,23.9,668.7,21.6,668.7V89.6 M46.5,668.7V89.6 M21.6,89.6v579.1h1.7h0.2h23V89.6H21.6z M33.9,99c1.8,0,3.2,1.4,3.2,3      c0,1.7-1.4,3-3.2,3c-1.8,0-3.2-1.4-3.2-3C30.7,100.3,32.2,99,33.9,99z M34,653.2c1.8,0,3.2,1.4,3.2,3c0,1.7-1.4,3-3.2,3      c-1.8,0-3.2-1.4-3.2-3C30.9,654.6,32.3,653.2,34,653.2z"
+   style="fill:#787878;fill-opacity:1" />
+			</g>
+		</g>
+		
+			<g
+   id="Actor_.7-0-7-4-1-3"
+   transform="translate(25.703911,-85.626046)"
+   inkscape:export-filename="micron_manual_extrusions_A.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:label="A1"
+   style="fill:#787878;fill-opacity:1">
+			<g
+   id="g3184-8-9-0-5-8"
+   inkscape:label="g3184-8-9-0-5-8"
+   style="fill:#787878;fill-opacity:1">
+				<path
+   id="path3182-4-7"
+   sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
+   class="st0"
+   d="M9.7,89.6l0,10.7 M9.7,103.8      l0,550.5 M9.7,658.2l0,10.5 M4.8,89.6c0,0,0,3.7,0,10.4 M4.8,104.1c0,80.3,0.1,469.1,0,549.9 M4.8,658.4c0,7.1,0,10.7,0,10.3       M-5.1,668.7C-2.7,668.7-2.7,668.7-5.1,668.7C-2.9,668.7-2.9,668.7-5.1,668.7C-2.9,668.7-2.9,668.7-5.1,668.7V89.6 M19.7,668.7      V89.6 M-5.1,89.6v579.1h1.7h0.2h23V89.6H-5.1z M7.1,99c1.8,0,3.2,1.4,3.2,3c0,1.7-1.4,3-3.2,3c-1.8,0-3.2-1.4-3.2-3      C3.9,100.3,5.4,99,7.1,99z M7.3,653.2c1.8,0,3.2,1.4,3.2,3c0,1.7-1.4,3-3.2,3c-1.8,0-3.2-1.4-3.2-3      C4.1,654.6,5.5,653.2,7.3,653.2z"
+   style="fill:#787878;fill-opacity:1" />
+			</g>
+		</g>
+	</g>
+</g>
+<g
+   id="layer4"
+   transform="translate(-20.054197,-3.2134922)"
+   inkscape:groupmode="layer"
+   inkscape:label="End"
+   class="st3">
+	<path
+   id="path13507"
+   class="st4"
+   d="m 187.8,84 c -0.2,0 -0.4,0.2 -0.4,0.4 0,0 0,0 0,0 v 9.1 c 0,0.2 0.2,0.4 0.4,0.4 0,0 0,0 0,0 h 1 c 0.2,0 0.4,-0.2 0.4,-0.4 0,0 0,0 0,0 v -1.4 c 0,-0.2 0.2,-0.4 0.4,-0.4 h 3.3 c 0.2,0 0.4,0.2 0.4,0.4 v 0 1.5 c 0,0.2 0.1,0.3 0.3,0.3 h 1.2 c 0.5,0 0.8,0.4 0.8,0.8 V 98 c 0,0.5 -0.4,0.8 -0.8,0.8 h -1.2 c -0.2,0 -0.3,0.1 -0.3,0.3 0,0 0,0 0,0 v 1.5 c 0,0.2 -0.2,0.4 -0.4,0.4 h -3.3 c -0.2,0 -0.4,-0.2 -0.4,-0.4 v -1.4 c 0,-0.2 -0.2,-0.4 -0.4,-0.4 0,0 0,0 0,0 h -1 c -0.2,0 -0.4,0.2 -0.4,0.4 0,0 0,0 0,0 v 9.1 c 0,0.2 0.2,0.4 0.4,0.4 0,0 0,0 0,0 h 9.1 c 0.2,0 0.4,-0.2 0.4,-0.4 0,0 0,0 0,0 v -1 c 0,-0.2 -0.2,-0.4 -0.4,-0.4 0,0 0,0 0,0 h -1.4 c -0.2,0 -0.4,-0.2 -0.4,-0.4 0,0 0,0 0,0 v -3.3 c 0,-0.2 0.2,-0.4 0.4,-0.4 0,0 0,0 0,0 h 1.5 c 0.2,0 0.3,-0.1 0.3,-0.3 v -1.2 c 0,-0.5 0.4,-0.8 0.8,-0.8 0,0 0,0 0,0 h 3.3 c 0.5,0 0.8,0.4 0.8,0.8 0,0 0,0 0,0 v 1.2 c 0,0.2 0.1,0.3 0.3,0.3 h 1.5 c 0.2,0 0.4,0.2 0.4,0.4 v 0 3.3 c 0,0.2 -0.2,0.4 -0.4,0.4 v 0 h -1.4 c -0.2,0 -0.4,0.2 -0.4,0.4 0,0 0,0 0,0 v 1 c 0,0.2 0.2,0.4 0.4,0.4 0,0 0,0 0,0 h 9.1 c 0.2,0 0.4,-0.2 0.4,-0.4 0,0 0,0 0,0 v -9.1 c 0,-0.2 -0.2,-0.4 -0.4,-0.4 0,0 0,0 0,0 h -1 c -0.2,0 -0.4,0.2 -0.4,0.4 0,0 0,0 0,0 v 1.4 c 0,0.2 -0.2,0.4 -0.4,0.4 h -3.3 c -0.2,0 -0.4,-0.2 -0.4,-0.4 v -1.5 c 0,-0.2 -0.1,-0.3 -0.3,-0.3 0,0 0,0 0,0 h -1.2 c -0.5,0 -0.8,-0.4 -0.8,-0.8 v -3.3 c 0,-0.5 0.4,-0.8 0.8,-0.8 h 1.2 c 0.2,0 0.3,-0.1 0.3,-0.3 v -1.5 c 0,-0.2 0.2,-0.4 0.4,-0.4 0,0 0,0 0,0 h 3.3 c 0.2,0 0.4,0.2 0.4,0.4 v 0 1.4 c 0,0.2 0.2,0.4 0.4,0.4 0,0 0,0 0,0 h 1 c 0.2,0 0.4,-0.2 0.4,-0.4 0,0 0,0 0,0 v -9.1 c 0,-0.2 -0.2,-0.4 -0.4,-0.4 0,0 0,0 0,0 h -9.1 c -0.2,0 -0.4,0.2 -0.4,0.4 0,0 0,0 0,0 v 1 c 0,0.2 0.2,0.4 0.4,0.4 0,0 0,0 0,0 h 1.4 c 0.2,0 0.4,0.2 0.4,0.4 0,0 0,0 0,0 v 3.3 c 0,0.2 -0.2,0.4 -0.4,0.4 0,0 0,0 0,0 h -1.5 c -0.2,0 -0.3,0.1 -0.3,0.3 v 1.2 c 0,0.5 -0.4,0.8 -0.8,0.8 0,0 0,0 0,0 h -3.3 c -0.5,0 -0.8,-0.4 -0.8,-0.8 0,0 0,0 0,0 v -1.2 c 0,-0.2 -0.1,-0.3 -0.3,-0.3 h -1.5 c -0.2,0 -0.4,-0.2 -0.4,-0.4 0,0 0,0 0,0 v -3.3 c 0,-0.2 0.2,-0.4 0.4,-0.4 0,0 0,0 0,0 h 1.4 c 0.2,0 0.4,-0.2 0.4,-0.4 0,0 0,0 0,0 v -1 c 0,-0.2 -0.2,-0.4 -0.4,-0.4 0,0 0,0 0,0 z m 3.8,2.1 c 0.3,0 0.6,0.1 0.9,0.2 h 0.6 c 0.2,0 0.4,0.2 0.4,0.4 v 0 0.6 c 0.3,0.6 0.3,1.2 0,1.8 v 0.6 c 0,0.2 -0.2,0.4 -0.4,0.4 v 0 h -0.6 c -0.6,0.3 -1.2,0.3 -1.8,0 h -0.6 c -0.2,0 -0.4,-0.2 -0.4,-0.4 v -0.6 c -0.3,-0.6 -0.3,-1.2 0,-1.8 v -0.6 c 0,-0.2 0.2,-0.4 0.4,-0.4 h 0.6 c 0.2,-0.1 0.4,-0.2 0.6,-0.2 0,0 0.1,0 0.3,0 z m 16.5,0 c 0.3,0 0.6,0.1 0.9,0.2 h 0.6 c 0.2,0 0.4,0.2 0.4,0.4 v 0 0.6 c 0.3,0.6 0.3,1.2 0,1.8 v 0.6 c 0,0.2 -0.2,0.4 -0.4,0.4 v 0 H 209 c -0.6,0.3 -1.2,0.3 -1.8,0 h -0.6 c -0.2,0 -0.4,-0.2 -0.4,-0.4 v 0 -0.6 c -0.3,-0.6 -0.3,-1.2 0,-1.8 v -0.6 c 0,-0.2 0.2,-0.4 0.4,-0.4 v 0 h 0.6 c 0.2,-0.1 0.4,-0.2 0.6,-0.2 0.1,0 0.2,0 0.3,0 z m -8.3,8.2 c 0.3,0 0.6,0.1 0.9,0.2 h 0.6 c 0.2,0 0.4,0.2 0.4,0.4 0,0 0,0 0,0 v 0.6 c 0.3,0.6 0.3,1.2 0,1.8 V 98 c 0,0.2 -0.2,0.4 -0.4,0.4 0,0 0,0 0,0 h -0.6 c -0.6,0.3 -1.2,0.3 -1.8,0 h -0.6 c -0.2,0 -0.4,-0.2 -0.4,-0.4 0,0 0,0 0,0 v -0.6 c -0.3,-0.6 -0.3,-1.2 0,-1.8 V 95 c 0,-0.2 0.2,-0.4 0.4,-0.4 0,0 0,0 0,0 h 0.6 c 0.2,-0.1 0.4,-0.2 0.6,-0.2 0.1,0 0.2,-0.1 0.3,-0.1 z m -8.2,8.3 c 0.3,0 0.6,0.1 0.9,0.2 h 0.6 c 0.2,0 0.4,0.2 0.4,0.4 v 0 0.6 c 0.3,0.6 0.3,1.2 0,1.8 v 0.6 c 0,0.2 -0.2,0.4 -0.4,0.4 v 0 h -0.6 c -0.6,0.3 -1.2,0.3 -1.8,0 h -0.6 c -0.2,0 -0.4,-0.2 -0.4,-0.4 v -0.6 c -0.3,-0.6 -0.3,-1.2 0,-1.8 v -0.6 c 0,-0.2 0.2,-0.4 0.4,-0.4 h 0.6 c 0.2,-0.1 0.4,-0.2 0.6,-0.2 0,0 0.1,0 0.3,0 z m 16.2,0.1 c 0.4,-0.1 0.8,0 1.2,0.2 h 0.6 c 0.2,0 0.4,0.2 0.4,0.4 v 0 0.6 c 0.3,0.6 0.3,1.2 0,1.8 v 0.6 c 0,0.2 -0.2,0.4 -0.4,0.4 v 0 H 209 c -0.6,0.3 -1.2,0.3 -1.8,0 h -0.6 c -0.2,0 -0.4,-0.2 -0.4,-0.4 v 0 -0.6 c -0.3,-0.6 -0.3,-1.2 0,-1.8 v -0.6 c 0,-0.2 0.2,-0.4 0.4,-0.4 v 0 h 0.6 c 0.2,-0.2 0.4,-0.2 0.6,-0.2 z" />
+</g>
+<g
+   id="layer2"
+   transform="translate(-20.054197,-3.2134922)"
+   inkscape:groupmode="layer"
+   inkscape:label="Measurement"
+   style="display:inline">
+	
+		
+</g>
+</svg>

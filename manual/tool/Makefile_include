@@ -18,6 +18,9 @@ pdf:: metadata.yml *.md
 		--from markdown \
 		--listings \
 		--table-of-contents \
+		--dpi=300 \
+		-V geometry:landscape
+
 		
 
 html:: metadata.yml *.md
@@ -28,7 +31,7 @@ html:: metadata.yml *.md
 		--from markdown \
 		--listings \
 		--table-of-contents \
-		--toc-depth=2 \
+		--toc-depth=3 \
 		--katex \
 		--dpi=300
 		
