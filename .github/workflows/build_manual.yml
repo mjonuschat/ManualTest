@@ -5,14 +5,12 @@ on:
     branches:
      - main
     paths:
-     - 'images/**'
      - 'manual/**'
      - '.github/workflows/build_manual.yml'
   pull_request:
     branches:
      - main
     paths:
-     - 'images/**'
      - 'manual/**'
      - '.github/workflows/build_manual.yml'
 
